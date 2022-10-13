@@ -54,3 +54,14 @@ prevBtn.addEventListener("click", function () {
     items[sliderPosition].classList.add("active");
     thumbnails[sliderPosition].classList.add("active");
 });
+
+for (let i = 0; i < thumbnails.length; i++) {
+    const thisThumb = thumbnails[i];
+    thisThumb.addEventListener("click", function () {
+        items[sliderPosition].classList.remove("active");
+        thumbnails[sliderPosition].classList.remove("active");
+        sliderPosition = i;
+        items[sliderPosition].classList.add("active");
+        thumbnails[sliderPosition].classList.add("active");
+    });
+}
